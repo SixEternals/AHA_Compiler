@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime", "-Ibuild/.gens/AHA/linux/x86_64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/AHA/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+}]
