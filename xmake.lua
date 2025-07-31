@@ -1,5 +1,14 @@
 add_rules("mode.debug", "mode.release")
 
+
+-- c,c++ setting
+-- set_toolset("cxx", "/llvm-project/install/bin/clang++")
+-- set_toolset("cc", "/llvm-project/install/bin/clang")
+toolchain("myclang")
+    set_toolset("cc", "clang")
+    set_toolset("cxx", "clang", "clang++")
+toolchain_end()
+
 target("aha")
     set_kind("binary")
     -- set_targetdir(".")  -- 输出到根目录

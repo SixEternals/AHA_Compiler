@@ -1,9 +1,14 @@
 #include "CharStream.h"
+#include "midend/Function.hpp"
+#include "midend/IRContext.hpp"
 #include "midend/IRVisitor.hpp"
+#include "midend/Type.hpp"
+#include "midend/Value.hpp"
 #include "SysYLexer.h"
 #include "SysYParser.h"
 #include <iostream>
 #include <midend/IRContext.hpp>
+#include <vector>
 using namespace antlr4;
 
 int main(int argc, char **argv) {
@@ -52,4 +57,31 @@ int main(int argc, char **argv) {
 
     std::cout << "Parsing and visiting completed successfully." << '\n';
     return 0;
+}
+
+// 测试Argument
+void test1() {
+    // 假设 Type 和 Function 已经定义并初始化
+    Type *intType = Type::getInt1Type();
+    std::vector<Type *> params{intType, intType};
+    FunctionType *type =
+        new FunctionType(intType, params); // 创建一个 Type 对象
+    // Function *function =
+    //     new Function("exampleFunction", type); // 创建一个 Function 对象
+    auto f = Function("exampleFunction", type);
+    // 使用 Argument 构造函数
+    unsigned argNo = 0; // 参数编号
+    // Argument *argument = new Argument(type, "exampleArgument", function,
+    // argNo);
+
+    // // 输出 Argument 的信息
+    // std::cout << "Argument Name: " << argument->getName() << std::endl;
+    // std::cout << "Parent Function Name: " << argument->getParent()->getName()
+    //           << std::endl;
+    // std::cout << "Argument Number: " << argument->getArgNo() << std::endl;
+
+    // // 清理内存
+    // delete argument;
+    // // delete f;
+    // delete type;
 }

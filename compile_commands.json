@@ -1,6 +1,86 @@
 [
 {
   "directory": "/home/pama/code/AHA",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fvisibility=hidden", "-fvisibility-inlines-hidden", "-O3", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime", "-Ibuild/.gens/AHA/linux/x86_64/release/platform/windows/idl", "-DNDEBUG", "-o", "build/.objs/AHA/linux/x86_64/release/src/main.cpp.o", "src/main.cpp"],
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYLexer.cpp.o", "antlr_frontend/SysYLexer.cpp"],
+  "file": "antlr_frontend/SysYLexer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserListener.cpp.o", "antlr_frontend/SysYParserListener.cpp"],
+  "file": "antlr_frontend/SysYParserListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserBaseListener.cpp.o", "antlr_frontend/SysYParserBaseListener.cpp"],
+  "file": "antlr_frontend/SysYParserBaseListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserVisitor.cpp.o", "antlr_frontend/SysYParserVisitor.cpp"],
+  "file": "antlr_frontend/SysYParserVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserBaseVisitor.cpp.o", "antlr_frontend/SysYParserBaseVisitor.cpp"],
+  "file": "antlr_frontend/SysYParserBaseVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParser.cpp.o", "antlr_frontend/SysYParser.cpp"],
+  "file": "antlr_frontend/SysYParser.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/main.cpp.o", "src/main.cpp"],
   "file": "src/main.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Instruction.cpp.o", "src/midend/Instruction.cpp"],
+  "file": "src/midend/Instruction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/User.cpp.o", "src/midend/User.cpp"],
+  "file": "src/midend/User.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/IRContext.cpp.o", "src/midend/IRContext.cpp"],
+  "file": "src/midend/IRContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/BasicBlock.cpp.o", "src/midend/BasicBlock.cpp"],
+  "file": "src/midend/BasicBlock.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/GlobalVariable.cpp.o", "src/midend/GlobalVariable.cpp"],
+  "file": "src/midend/GlobalVariable.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/IRVisitor.cpp.o", "src/midend/IRVisitor.cpp"],
+  "file": "src/midend/IRVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Type.cpp.o", "src/midend/Type.cpp"],
+  "file": "src/midend/Type.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Function.cpp.o", "src/midend/Function.cpp"],
+  "file": "src/midend/Function.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Constant.cpp.o", "src/midend/Constant.cpp"],
+  "file": "src/midend/Constant.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Value.cpp.o", "src/midend/Value.cpp"],
+  "file": "src/midend/Value.cpp"
 }]

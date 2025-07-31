@@ -61,6 +61,11 @@
     "shared_mutex": "cpp",
     "sstream": "cpp",
     "stop_token": "cpp",
-    "thread": "cpp"
-  }
+    "thread": "cpp",
+    "span": "cpp",
+    "cinttypes": "cpp",
+    "variant": "cpp"
+  },
+  "trae.tab.enableRename": false,
+  "trae.tab.enableAutoImport": false
 }
