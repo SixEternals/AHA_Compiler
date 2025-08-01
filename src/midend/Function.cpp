@@ -115,3 +115,7 @@ std::string Function::print() {
 
     return func_ir;
 }
+
+void Function::addBasicBlock(BasicBlock *bb) {
+    baseBlocks.push_back(bb);
+}

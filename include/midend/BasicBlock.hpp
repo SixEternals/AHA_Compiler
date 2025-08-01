@@ -25,7 +25,7 @@ BasicBlock格式为
 class BasicBlock : public Value {
 private:
     Function *parent_;
-    int loop_depth = 0;
+    int loop_depth = 0; // 分析用
     std::list<BasicBlock *> pre_bbs_;
     std::list<BasicBlock *> succ_bbs_;
     static int baseBlockCounter;
@@ -33,15 +33,43 @@ private:
     std::ostringstream IRCodeBuilder;
     std::string label;
     std::list<Instruction *> instr_list_;
-    // std::list<>
+
 private:
     explicit BasicBlock(std::string const &name, Function *parent);
 
 public:
     static BasicBlock *create(std::string const &name, Function *parent);
 
+    // basic methods
+    bool empty() {
+        return instr_list_.empty();
+    }
+
+    int getNumOfInstrs() {
+        return instr_list_.size();
+    }
+
+    std::list<Instruction *> &getInstructions() {
+        return instr_list_;
+    }
+
     Function *getParent() {
         return parent_;
+    }
+
+    virtual std::string print() override;
+
+    __attribute__((always_inline)) void addInstruction(Instruction *ins) {
+        instr_list_.push_back(ins);
+    }
+
+    // CFG serial
+    std::list<BasicBlock *> &getPreBasicBlocks() {
+        return pre_bbs_;
+    }
+
+    std::list<BasicBlock *> &getSuccBasicBlocks() {
+        return succ_bbs_;
     }
 
     void addPreBasicBlock(BasicBlock *bb) {
@@ -52,10 +80,28 @@ public:
         succ_bbs_.push_back(bb);
     }
 
-    virtual std::string print() override;
-
-    __attribute__((always_inline)) void addInstruction(Instruction *ins) {
-        instr_list_.push_back(ins);
+    void removePreBasicBlock(BasicBlock *bb) {
+        pre_bbs_.remove(bb);
     }
+
+    void removeSuccBasicBlock(BasicBlock *bb) {
+        succ_bbs_.remove(bb);
+    }
+
+    // Iterator
+    __attribute__((always_inline)) std::list<Instruction *>::iterator
+    findInstruction(Instruction *instr) {
+        return std::find(instr_list_.begin(), instr_list_.end(), instr);
+    }
+
+    void replaceWithNewInstr(Instruction *old_ins, Instruction *new_ins);
+    // 消除依赖关系
+    void eraseFromParent();
+    BasicBlock *copyBB();
+
+    // 用于获取当前基本块（BasicBlock）的“终结指令”（terminator
+    // instruction），例如 ret、br、cmpbr、fcmpbr 等控制流指令。它返回的是指向
+    // Instruction 的指针。
+    Instruction const *getVaildTerminator() const;
 };
 #endif

@@ -23,6 +23,7 @@ public:
     void removeUseOfOps();
 
 private:
+    // 操作数，数量不限
     std::vector<Value *> operands_; //& operands of this value
     // unsigned num_ops_;
 };

@@ -603,34 +603,372 @@ private:
     Type *element_ty_;
 };
 
-class StoreInst : public Instruction {};
+class StoreInst : public Instruction {
+public:
+    static StoreInst *createStore(Value *val, Value *ptr, BasicBlock *bb);
+
+    Value *getRVal() {
+        return this->getOperand(0);
+    }
+
+    Value *getLVal() {
+        return this->getOperand(1);
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new StoreInst(getOperand(0), getOperand(1), bb);
+    }
+
+private:
+    StoreInst(Value *val, Value *ptr, BasicBlock *bb);
+};
 
 //& 加速使用全0初始化数组的代码优化分析和代码生成
-class MemsetInst : public Instruction {};
+class MemsetInst : public Instruction {
+public:
+    static MemsetInst *createMemset(Value *ptr, BasicBlock *bb);
 
-class LoadInst : public Instruction {};
+    Value *getLVal() {
+        return this->getOperand(0);
+    }
 
-class AllocaInst : public Instruction {};
+    virtual std::string print() override;
 
-class ZextInst : public Instruction {};
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new MemsetInst(getOperand(0), bb);
+    }
 
-class SiToFpInst : public Instruction {};
+private:
+    MemsetInst(Value *ptr, BasicBlock *bb);
+};
 
-class FpToSiInst : public Instruction {};
+class LoadInst : public Instruction {
+    static LoadInst *createLoad(Type *ty, Value *ptr, BasicBlock *bb);
 
-class PhiInst : public Instruction {};
+    Value *getLVal() {
+        return this->getOperand(0);
+    }
 
-class CmpBrInst : public Instruction {};
+    Type *getLoadType() const {
+        return static_cast<PointerType *>(getOperand(0)->getType())
+            ->getElementType();
+    }
 
-class FCmpBrInst : public Instruction {};
+    virtual std::string print() override;
 
-class LoadOffsetInst : public Instruction {};
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new LoadInst(getType(), getOperand(0), bb);
+    }
 
-class StoreOffsetInst : public Instruction {};
+private:
+    LoadInst(Type *ty, Value *ptr, BasicBlock *bb);
+};
 
-class SelectInst : public Instruction {};
+class AllocaInst : public Instruction {
+public:
+    static AllocaInst *createAlloca(Type *ty, BasicBlock *bb);
 
-class LoadImmInst : public Instruction {};
+    Type *getAllocaType() const {
+        return alloca_ty_;
+    }
 
-class CastInst : public Instruction {};
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new AllocaInst(alloca_ty_, bb);
+    }
+
+private:
+    AllocaInst(Type *ty, BasicBlock *bb);
+
+private:
+    Type *alloca_ty_;
+};
+
+class ZextInst : public Instruction {
+public:
+    static ZextInst *createZext(Value *val, Type *ty, BasicBlock *bb);
+
+    Type *getDestType() const {
+        return getType();
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new ZextInst(getOperand(0), getDestType(), bb);
+    }
+
+private:
+    ZextInst(Value *val, Type *ty, BasicBlock *bb);
+};
+
+class SiToFpInst : public Instruction {
+public:
+    static SiToFpInst *createSiToFp(Value *val, Type *ty, BasicBlock *bb);
+
+    Type *getDestType() const {
+        return getType();
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new SiToFpInst(getOperand(0), getDestType(), bb);
+    }
+
+private:
+    SiToFpInst(Value *val, Type *ty, BasicBlock *bb);
+};
+
+class FpToSiInst : public Instruction {
+public:
+    static FpToSiInst *createFpToSi(Value *val, Type *ty, BasicBlock *bb);
+
+    Type *getDestType() const {
+        return getType();
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new FpToSiInst(getOperand(0), getDestType(), bb);
+    }
+
+private:
+    FpToSiInst(Value *val, Type *ty, BasicBlock *bb);
+};
+
+class PhiInst : public Instruction {
+public:
+    static PhiInst *createPhi(Type *ty, BasicBlock *bb);
+
+    // Value *getLVal() { return l_val_; }
+    // void setLVal(Value *l_val) { l_val_ = l_val; }
+
+    void addPhiPairOperand(Value *val, Value *pre_bb) {
+        this->addOperand(val);
+        this->addOperand(pre_bb);
+    }
+
+    void removePhiPairOperand(Value *pre_bb) {
+        for (int i = 1; i < getNumOperands(); i += 2) {
+            if (getOperand(i) == pre_bb) {
+                removeOperands(i - 1, i);
+                break;
+            }
+        }
+
+        std::vector<Value *> &ops = this->getOperands();
+        this->removeUseOfOps();
+        for (int i = 0; i < ops.size(); i++) {
+            this->getOperand(i)->addUse(this, i);
+        }
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        auto new_inst = createPhi(getType(), bb);
+        for (auto op: getOperands()) {
+            new_inst->addOperand(op);
+        }
+        return new_inst;
+    }
+
+private:
+    PhiInst(OpID op, std::vector<Value *> vals,
+            std::vector<BasicBlock *> val_bbs, Type *ty, BasicBlock *bb);
+};
+
+class CmpBrInst : public Instruction {
+public:
+    static CmpBrInst *createCmpBr(CmpOp op, Value *lhs, Value *rhs,
+                                  BasicBlock *if_true, BasicBlock *if_false,
+                                  BasicBlock *bb);
+
+    CmpOp getCmpOp() {
+        return cmp_op_;
+    }
+
+    bool isCmpBr() const;
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        auto new_inst =
+            new CmpBrInst(cmp_op_, getOperand(0), getOperand(1), bb);
+        new_inst->setOperand(2, getOperand(2));
+        new_inst->setOperand(3, getOperand(3));
+        return new_inst;
+    }
+
+private:
+    CmpBrInst(CmpOp op, Value *lhs, Value *rhs, BasicBlock *if_true,
+              BasicBlock *if_false, BasicBlock *bb);
+    CmpBrInst(CmpOp op, Value *lhs, Value *rhs, BasicBlock *bb);
+
+private:
+    CmpOp cmp_op_;
+};
+
+class FCmpBrInst : public Instruction {
+public:
+    static FCmpBrInst *createFCmpBr(CmpOp op, Value *lhs, Value *rhs,
+                                    BasicBlock *if_true, BasicBlock *if_false,
+                                    BasicBlock *bb);
+
+    CmpOp getCmpOp() {
+        return cmp_op_;
+    }
+
+    bool isFCmpBr() const;
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        auto new_inst =
+            new FCmpBrInst(cmp_op_, getOperand(0), getOperand(1), bb);
+        new_inst->setOperand(2, getOperand(2));
+        new_inst->setOperand(3, getOperand(3));
+        return new_inst;
+    }
+
+private:
+    FCmpBrInst(CmpOp op, Value *lhs, Value *rhs, BasicBlock *if_true,
+               BasicBlock *if_false, BasicBlock *bb);
+    FCmpBrInst(CmpOp op, Value *lhs, Value *rhs, BasicBlock *bb);
+
+private:
+    CmpOp cmp_op_;
+};
+
+class LoadOffsetInst : public Instruction {
+public:
+    static LoadOffsetInst *createLoadOffset(Type *ty, Value *ptr, Value *offset,
+                                            BasicBlock *bb);
+
+    Value *getLVal() {
+        return this->getOperand(0);
+    }
+
+    Value *getOffset() {
+        return this->getOperand(1);
+    }
+
+    Type *getLoadType() const;
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        auto new_inst = new LoadOffsetInst(getType(), getOperand(0), bb);
+        new_inst->setOperand(1, getOperand(1));
+        return new_inst;
+    }
+
+private:
+    LoadOffsetInst(Type *ty, Value *ptr, Value *offset, BasicBlock *bb);
+    LoadOffsetInst(Type *ty, Value *ptr, BasicBlock *bb);
+};
+
+class StoreOffsetInst : public Instruction {
+public:
+    static StoreOffsetInst *createStoreOffset(Value *val, Value *ptr,
+                                              Value *offset, BasicBlock *bb);
+
+    Type *getStoreType() const;
+
+    Value *getRVal() {
+        return this->getOperand(0);
+    }
+
+    Value *getLVal() {
+        return this->getOperand(1);
+    }
+
+    Value *getOffset() {
+        return this->getOperand(2);
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        auto new_inst = new StoreOffsetInst(getOperand(0), getOperand(1), bb);
+        new_inst->setOperand(2, getOperand(2));
+        return new_inst;
+    }
+
+private:
+    StoreOffsetInst(Value *val, Value *ptr, Value *offset, BasicBlock *bb);
+    StoreOffsetInst(Value *val, Value *ptr, BasicBlock *bb);
+};
+
+// 处理if-else
+class SelectInst : public Instruction {
+public:
+    static SelectInst *createSelect(Type *type, Value *cond, Value *true_val,
+                                    Value *false_val, BasicBlock *bb);
+
+    // Type *getSelectType() const{return getType();}
+
+    __attribute__((always_inline)) Value *getCond() const {
+        return getOperand(0);
+    }
+
+    __attribute__((always_inline)) Value *getTrue() const {
+        return getOperand(1);
+    }
+
+    __attribute__((always_inline)) Value *getFalse() const {
+        return getOperand(2);
+    }
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new SelectInst(this->getType(), getOperand(0), getOperand(1),
+                              getOperand(2), bb);
+    }
+
+private:
+    SelectInst(Type *type, Value *cond, Value *true_val, Value *false_val,
+               BasicBlock *bb);
+};
+
+class LoadImmInst : public Instruction {
+public:
+    static LoadImmInst *createLoadImm(Type *type, Value *cons, BasicBlock *bb);
+    static LoadImmInst *createLoadImm(Type *type, Value *cons);
+    // Type *getSelectType() const{return getType();}
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new LoadImmInst(this->getType(), getOperand(0), bb);
+    }
+
+private:
+    LoadImmInst(Type *type, Value *cons, BasicBlock *bb);
+    LoadImmInst(Type *type, Value *cons);
+};
+
+class CastInst : public Instruction {
+public:
+    static CastInst *createCastInst(Type *type, Value *val, BasicBlock *bb);
+    static CastInst *createCastInst(Type *type, Value *val);
+    // Type *getSelectType() const{return getType();}
+
+    virtual std::string print() override;
+
+    Instruction *copyInst(BasicBlock *bb) override final {
+        return new CastInst(this->getType(), getOperand(0), bb);
+    }
+
+private:
+    Type *origin_type;
+    CastInst(Type *type, Value *val, BasicBlock *bb);
+    CastInst(Type *type, Value *val);
+};
 #endif

@@ -47,6 +47,7 @@ public:
 
     void setInstrName();
     std::string print() override;
+    void addBasicBlock(BasicBlock *bb);
 };
 
 class Argument : public Value {
