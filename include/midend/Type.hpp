@@ -17,7 +17,7 @@ class IRContext;
  *
  * 该类提供了对类型参数和返回类型的访问接口。
  * - `paramBegin()` 和 `paramEnd()` 方法用于获取类型参数的迭代器范围。
- * - `getParamType(unsigned i)` 方法用于获取指定索引的类型参数。
+ * - `getParamType(size_t i)` 方法用于获取指定索引的类型参数。
  * - `getReturnType()` 方法用于获取返回类型。
  *
  * 成员变量：
@@ -83,7 +83,7 @@ public:
     static FloatType *getFloatType();
     static PointerType *getFloatPtrType();
     static PointerType *getPointerType(Type *contained);
-    static ArrayType *getArrayType(Type *contained, unsigned num_elements);
+    static ArrayType *getArrayType(Type *contained, size_t num_elements);
     Type *getPointerElementType();
     Type *getArrayElementType();
 
@@ -109,16 +109,16 @@ private:
  */
 class IntegerType : public Type {
 public:
-    explicit IntegerType(unsigned num_bits)
+    explicit IntegerType(size_t num_bits)
         : Type(Type::IntegerTyID),
           num_bits_(num_bits) {}
 
-    static IntegerType *get(unsigned num_bits);
+    static IntegerType *get(size_t num_bits);
 
-    unsigned getNumBits();
+    size_t getNumBits();
 
 private:
-    unsigned num_bits_;
+    size_t num_bits_;
 };
 
 /**
@@ -179,9 +179,9 @@ private:
  */
 class ArrayType : public Type {
 public:
-    ArrayType(Type *contained, unsigned num_elements);
+    ArrayType(Type *contained, size_t num_elements);
 
-    static ArrayType *get(Type *contained, unsigned num_elements);
+    static ArrayType *get(Type *contained, size_t num_elements);
 
     static bool isValidElementType(Type *ty);
 
@@ -189,13 +189,13 @@ public:
         return contained_;
     }
 
-    unsigned getNumOfElements() const {
+    size_t getNumOfElements() const {
         return num_elements_;
     }
 
 private:
-    Type *contained_;       //& The element type of the array.
-    unsigned num_elements_; //& Number of elements in the array.
+    Type *contained_;     //& The element type of the array.
+    size_t num_elements_; //& Number of elements in the array.
 };
 
 /**
@@ -218,7 +218,7 @@ public:
     static bool isValidReturnType(Type *ty);
     static bool isValidArgumentType(Type *params);
 
-    unsigned getNumOfArgs() const {
+    size_t getNumOfArgs() const {
         return args_.size();
     };
 
@@ -230,7 +230,7 @@ public:
         return args_.end();
     }
 
-    Type *getParamType(unsigned i) const {
+    Type *getParamType(size_t i) const {
         return args_[i];
     };
 

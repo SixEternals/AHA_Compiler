@@ -30,7 +30,7 @@ public:
     PointerType *getInt32PtrType();
     PointerType *getFloatPtrType();
     PointerType *getPointerType(Type *contained);
-    ArrayType *getArrayType(Type *contained, unsigned num_elements);
+    ArrayType *getArrayType(Type *contained, size_t num_elements);
     FunctionType *getFunctionType(Type *retty, std::vector<Type *> &args);
 };
 

@@ -2,7 +2,7 @@
 #include "midend/User.hpp"
 #include <cassert>
 
-void Value::addUse(Value *val, unsigned arg_no) {
+void Value::addUse(Value *val, size_t arg_no) {
     use_list_.push_back(Use(val, arg_no));
 }
 

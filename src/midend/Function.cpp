@@ -1,26 +1,29 @@
 #include "midend/Function.hpp"
+#include <cstddef>
 #include <map>
 #include <memory>
 
-Function::Function(std::string functionName, FunctionType *type)
-    : Value(type),
-      functionName(functionName) {
-    int count = 0;
-
-    // buildArgs
-    auto paramType = type->paramBegin();
-    int i = 0;
-    for (; paramType != type->paramEnd(); paramType++, i++) {
-        // Argument *valRegister = new Argument(
-        //     paramType, std::to_string(count++) + "_" + functionName, this,
-        //     i);
-        // paramsValue.push_back(valRegister);
-        // auto t = new Argument(
-        //     paramType, std::to_string(count++) + "_" + functionName, this,
-        //     i);
+void Function::buildArgs(){
+  auto function_type = getFunctionType();
+  size_t num_args = getNumOfArgs();
+  for(size_t i{0}; i< num_args; ++i){
+    auto arg = new Argument(function_type->getParamType(i), "",this,i);
+    arguments_.push_back(arg);
+    if(arg->getType()->isFloatType()){
+        f_args_.push_back(arg);
+    }else if(arg->getType()->isIntegerType()){
+        i_args_.push_back(arg);
     }
+  }
 }
 
+Function::Function(FunctionType *ty, std::string const &name, Module *parent)
+    : Value(ty, name),
+      parent_(parent),
+      seq_cnt_(0) {
+    parent->addFunction(this);
+    buildArgs();
+}
 void Function::setInstrName() {
     std::map<Value *, int> seq;
     for (auto const &arg: this->getArgs()) {
@@ -118,4 +121,16 @@ std::string Function::print() {
 
 void Function::addBasicBlock(BasicBlock *bb) {
     baseBlocks.push_back(bb);
+}
+
+
+void Function::removeBasicBlock(BasicBlock *bb) {
+  baseBlocks.erase(std::find(baseBlocks.begin(), baseBlocks.end(), bb));
+  // 删除依赖关系
+  for (auto pre : bb->getPreBasicBlocks()){
+    pre->removePreBasicBlock(bb);
+  }
+  for(auto succ : bb->getSuccBasicBlocks()){
+    succ->removeSuccBasicBlock(bb);
+  }
 }

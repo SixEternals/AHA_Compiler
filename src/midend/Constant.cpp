@@ -211,7 +211,7 @@ std::string ConstantZero::print() {
 
 //& ConstantArray
 ConstantArray::ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
-                             unsigned int size)
+                             size_t int size)
     : Constant(ty, "", size) {
     for (int i = 0; i < size; i++) {
         if (vals.find(i) != vals.end()) {
@@ -226,7 +226,7 @@ ConstantArray::ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
 
 ConstantArray *ConstantArray::get(ArrayType *ty,
                                   std::map<int, Value *> const &vals_map,
-                                  unsigned int size) {
+                                  size_t int size) {
     return new ConstantArray(ty, vals_map, size);
 }
 

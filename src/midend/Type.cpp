@@ -36,7 +36,7 @@ PointerType *Type::getPointerType(Type *contained) {
     return PointerType::get(contained);
 }
 
-ArrayType *Type::getArrayType(Type *contained, unsigned num_elements) {
+ArrayType *Type::getArrayType(Type *contained, size_t num_elements) {
     return ArrayType::get(contained, num_elements);
 }
 
@@ -120,7 +120,7 @@ std::string Type::print() {
 
 //& IntegerType
 
-IntegerType *IntegerType::get(unsigned num_bits) {
+IntegerType *IntegerType::get(size_t num_bits) {
     if (num_bits == 1) {
         return Type::context->getInt1Type();
     } else if (num_bits == 32) {
@@ -131,7 +131,7 @@ IntegerType *IntegerType::get(unsigned num_bits) {
     }
 }
 
-unsigned IntegerType::getNumBits() {
+size_t IntegerType::getNumBits() {
     return num_bits_;
 }
 
@@ -147,7 +147,7 @@ PointerType *PointerType::get(Type *contained) {
 }
 
 //& ArrayType
-ArrayType::ArrayType(Type *contained, unsigned num_elements)
+ArrayType::ArrayType(Type *contained, size_t num_elements)
     : Type(Type::ArrayTyID),
       num_elements_(num_elements) {
     assert(isValidElementType(contained) &&
@@ -155,7 +155,7 @@ ArrayType::ArrayType(Type *contained, unsigned num_elements)
     contained_ = contained;
 }
 
-ArrayType *ArrayType::get(Type *contained, unsigned num_elements) {
+ArrayType *ArrayType::get(Type *contained, size_t num_elements) {
     return Type::context->getArrayType(contained, num_elements);
 }
 

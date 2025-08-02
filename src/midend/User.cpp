@@ -1,16 +1,16 @@
 #include "midend/User.hpp"
 #include <cassert>
 
-User::User(Type *ty, std::string const &name, unsigned num_ops)
+User::User(Type *ty, std::string const &name, size_t num_ops)
     : Value(ty, name) {
     operands_.resize(num_ops, nullptr);
 }
 
-Value *User::getOperand(unsigned i) const {
+Value *User::getOperand(size_t i) const {
     return operands_[i];
 }
 
-void User::replaceOperand(unsigned i, Value *v) {
+void User::replaceOperand(size_t i, Value *v) {
     operands_[i]->removeUse(this);
     assert(i < operands_.size() && "set_operand out of index");
     operands_[i] = v;
@@ -22,7 +22,7 @@ void User::replaceOperand(unsigned i, Value *v) {
     // }
 }
 
-void User::setOperand(unsigned i, Value *v) {
+void User::setOperand(size_t i, Value *v) {
     assert(i < operands_.size() && "set_operand out of index");
     operands_[i] = v;
     v->addUse(this, i);
@@ -38,7 +38,7 @@ std::vector<Value *> &User::getOperands() {
     return operands_;
 }
 
-unsigned User::getNumOperands() const noexcept {
+size_t User::getNumOperands() const noexcept {
     return operands_.size();
 }
 

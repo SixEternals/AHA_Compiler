@@ -132,8 +132,11 @@ public:
 
 public:
     //& create instruction, auto insert to bb, ty here is result type
-    Instruction(Type *ty, OpID id, unsigned num_ops, BasicBlock *parent);
-    Instruction(Type *ty, OpID id, unsigned num_ops);
+    Instruction(Type *ty, OpID id, size_t num_ops, BasicBlock *parent);
+    Instruction(Type *ty, OpID id, size_t num_ops);
+    // todo: 不知道会不会让Instruction正确被析构
+    // 关联函数：void BasicBlock::deleteInstr(Instruction *instr)
+    virtual ~Instruction();
 
     inline BasicBlock const *getParent() const {
         return parent_;
@@ -352,13 +355,9 @@ public:
 
     virtual Instruction *copyInst(BasicBlock *bb) = 0;
 
-    // todo:
-    // 后端遍历
-    // virtual void accept(IRVisitor &visitor) = 0;
-
 private:
     OpID op_id_;
-    // unsigned num_ops_;
+    // size_t num_ops_;
     BasicBlock *parent_;
 };
 
@@ -397,10 +396,6 @@ public:
 
     bool isNeg();
 
-    // 后端遍历
-    // todo
-    // virtual void accept(IRVisitor &visitor) final;
-
 private:
     BinaryInst(Type *ty, OpID id, Value *v1, Value *v2, BasicBlock *bb);
     BinaryInst(Type *ty, OpID id, Value *v1, Value *v2);
@@ -432,9 +427,6 @@ public:
                            bb);
     }
 
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
-
 private:
     CmpInst(Type *ty, CmpOp op, Value *lhs, Value *rhs, BasicBlock *bb);
     //~ void assert_valid();
@@ -460,9 +452,6 @@ public:
         return new FCmpInst(getType(), cmp_op_, getOperand(0), getOperand(1),
                             bb);
     }
-
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
 
 private:
     FCmpInst(Type *ty, CmpOp op, Value *lhs, Value *rhs, BasicBlock *bb);
@@ -494,9 +483,6 @@ public:
         new_inst->setOperand(0, getOperand(0));
         return new_inst;
     }
-
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
 
 protected:
     CallInst(Function *func, std::vector<Value *> args, BasicBlock *bb);
@@ -531,9 +517,6 @@ public:
         }
     }
 
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
-
 private:
     BranchInst(Value *cond, BasicBlock *if_true, BasicBlock *if_false,
                BasicBlock *bb);
@@ -565,9 +548,6 @@ public:
         }
     }
 
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
-
 private:
     ReturnInst(Value *val, BasicBlock *bb);
     ReturnInst(BasicBlock *bb);
@@ -592,9 +572,6 @@ public:
         }
         return new GetElementPtrInst(getOperand(0), idxs, bb);
     }
-
-    // todo: 后端遍历
-    // virtual void accept(IRVisitor &visitor) final;
 
 private:
     GetElementPtrInst(Value *ptr, std::vector<Value *> idxs, BasicBlock *bb);

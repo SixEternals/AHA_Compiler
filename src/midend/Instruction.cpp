@@ -90,15 +90,14 @@ std::string printAsOpWithType(Value *v) {
 }
 
 //& Instruction
-Instruction::Instruction(Type *ty, OpID id, unsigned num_ops,
-                         BasicBlock *parent)
+Instruction::Instruction(Type *ty, OpID id, size_t num_ops, BasicBlock *parent)
     : User(ty, "", num_ops),
       op_id_(id),
       parent_(parent) {
     parent_->addInstruction(this);
 }
 
-Instruction::Instruction(Type *ty, OpID id, unsigned num_ops)
+Instruction::Instruction(Type *ty, OpID id, size_t num_ops)
     : User(ty, "", num_ops),
       op_id_(id),
       parent_(nullptr) {}

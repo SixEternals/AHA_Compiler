@@ -70,7 +70,7 @@ void test1() {
     //     new Function("exampleFunction", type); // 创建一个 Function 对象
     auto f = Function("exampleFunction", type);
     // 使用 Argument 构造函数
-    unsigned argNo = 0; // 参数编号
+    size_t argNo = 0; // 参数编号
     // Argument *argument = new Argument(type, "exampleArgument", function,
     // argNo);
 

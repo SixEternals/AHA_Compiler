@@ -29,7 +29,7 @@ public:
     static Constant *get(Constant *lhs, Instruction::OpID bin_op,
                          Constant *rhs);
 
-    Constant(Type *ty, std::string const &name = "", unsigned num_ops = 0)
+    Constant(Type *ty, std::string const &name = "", size_t num_ops = 0)
         : User(ty, name, num_ops) {}
 
     ~Constant() = default;
@@ -102,9 +102,8 @@ class ConstantArray : public Constant {
 public:
     ~ConstantArray() = default;
 
-    static ConstantArray *get(ArrayType *ty,
-                              std::map<int, Value *> const &vals_map,
-                              unsigned int size);
+    static ConstantArray *
+    get(ArrayType *ty, std::map<int, Value *> const &vals_map, size_t int size);
 
     Constant *getElementValue(int index) {
         if (init_val_map[index]) {
@@ -113,7 +112,7 @@ public:
         return dynamic_cast<Constant *>(init_val_map[-1]);
     };
 
-    unsigned getSizeOfArray() {
+    size_t getSizeOfArray() {
         return array_size;
     }
 
@@ -121,7 +120,7 @@ public:
 
 private:
     ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
-                  unsigned int size);
+                  size_t int size);
 
 private:
     std::map<int, Value *> init_val_map;

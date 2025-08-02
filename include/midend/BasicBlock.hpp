@@ -75,15 +75,12 @@ public:
     void addPreBasicBlock(BasicBlock *bb) {
         pre_bbs_.push_back(bb);
     }
-
     void addSuccBasicBlock(BasicBlock *bb) {
         succ_bbs_.push_back(bb);
     }
-
     void removePreBasicBlock(BasicBlock *bb) {
         pre_bbs_.remove(bb);
     }
-
     void removeSuccBasicBlock(BasicBlock *bb) {
         succ_bbs_.remove(bb);
     }
@@ -103,5 +100,13 @@ public:
     // instruction），例如 ret、br、cmpbr、fcmpbr 等控制流指令。它返回的是指向
     // Instruction 的指针。
     Instruction const *getVaildTerminator() const;
+
+    void addInstrBeforeTeminator(Instruction *instr);
+    void addInstrAfterPhiInst(Instruction *instr);
+    void deleteInstr(Instruction *instr);
+
+    using InstrListIter = ::std::list<Instruction *>::iterator ;
+    InstrListIter eraseInstr(InstrListIter instr_iter);
+    InstrListIter InsertInstr(InstrListIter instr_iter, Instruction *instr);
 };
 #endif

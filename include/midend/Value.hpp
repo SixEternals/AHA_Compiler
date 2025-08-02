@@ -10,21 +10,21 @@ class Value;
 class User;
 
 struct Use {
-    Use(Value *val, unsigned no) : val_(val), arg_no_(no) {}
+    Use(Value *val, size_t no) : val_(val), arg_no_(no) {}
 
     friend bool operator==(Use const &lhs, Use const &rhs) {
         return lhs.val_ == rhs.val_ && lhs.arg_no_ == rhs.arg_no_;
     }
 
     Value *val_;
-    unsigned arg_no_; //& the no. of operand, e.g., func(a, b), a is 0, b is 1
+    size_t arg_no_; //& the no. of operand, e.g., func(a, b), a is 0, b is 1
 };
 
 class UseHash {
 public:
     size_t operator()(Use const &u) const {
         return (std::hash<Value *>()(u.val_)) ^
-               (std::hash<unsigned>()(u.arg_no_));
+               (std::hash<size_t>()(u.arg_no_));
     }
 };
 
@@ -48,7 +48,7 @@ public:
         return use_list_.size();
     }
 
-    void addUse(Value *val, unsigned arg_no = 0);
+    void addUse(Value *val, size_t arg_no = 0);
 
     bool setName(std::string name) {
         if (name_ == "") {
