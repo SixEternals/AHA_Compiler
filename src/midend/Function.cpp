@@ -21,7 +21,7 @@ Function::Function(FunctionType *ty, std::string const &name, Module *parent)
     : Value(ty, name),
       parent_(parent),
       seq_cnt_(0) {
-    parent->addFunction(this);
+    // parent->addFunction(this);
     buildArgs();
 }
 void Function::setInstrName() {
