@@ -5,38 +5,47 @@
 IRContext *Type::context = nullptr;
 
 Type *Type::getVoidType() {
+    IRContext::getInstance();
     return Type::context->getVoidType();
 }
 
 Type *Type::getLabelType() {
+    IRContext::getInstance();
     return Type::context->getLabelType();
 }
 
 IntegerType *Type::getInt1Type() {
+    IRContext::getInstance();
     return Type::context->getInt1Type();
 }
 
 IntegerType *Type::getInt32Type() {
+    IRContext::getInstance();
     return Type::context->getInt32Type();
 }
 
 PointerType *Type::getInt32PtrType() {
+    IRContext::getInstance();
     return Type::context->getInt32PtrType();
 }
 
 FloatType *Type::getFloatType() {
+    IRContext::getInstance();
     return Type::context->getFloatType();
 }
 
 PointerType *Type::getFloatPtrType() {
+    IRContext::getInstance();
     return Type::context->getFloatPtrType();
 }
 
 PointerType *Type::getPointerType(Type *contained) {
+    IRContext::getInstance();
     return PointerType::get(contained);
 }
 
 ArrayType *Type::getArrayType(Type *contained, size_t num_elements) {
+    IRContext::getInstance();
     return ArrayType::get(contained, num_elements);
 }
 
@@ -121,6 +130,7 @@ std::string Type::print() {
 //& IntegerType
 
 IntegerType *IntegerType::get(size_t num_bits) {
+    IRContext::getInstance();
     if (num_bits == 1) {
         return Type::context->getInt1Type();
     } else if (num_bits == 32) {
@@ -138,11 +148,13 @@ size_t IntegerType::getNumBits() {
 //& FloatType
 
 FloatType *FloatType::get() {
+    IRContext::getInstance();
     return Type::context->getFloatType();
 }
 
 //& PointerType
 PointerType *PointerType::get(Type *contained) {
+    IRContext::getInstance();
     return Type::context->getPointerType(contained);
 }
 
@@ -156,6 +168,7 @@ ArrayType::ArrayType(Type *contained, size_t num_elements)
 }
 
 ArrayType *ArrayType::get(Type *contained, size_t num_elements) {
+    IRContext::getInstance();
     return Type::context->getArrayType(contained, num_elements);
 }
 
@@ -178,6 +191,7 @@ FunctionType::FunctionType(Type *result, std::vector<Type *> params)
 }
 
 FunctionType *FunctionType::get(Type *result, std::vector<Type *> params) {
+    IRContext::getInstance();
     return Type::context->getFunctionType(result, params);
 }
 

@@ -87,6 +87,8 @@ public:
     Type *getPointerElementType();
     Type *getArrayElementType();
 
+    // static void resetContext();
+
     static IRContext *context;
 
     int getSize();

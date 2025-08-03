@@ -1,0 +1,771 @@
+[
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYLexer.cpp.o", "antlr_frontend/SysYLexer.cpp"],
+  "file": "antlr_frontend/SysYLexer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserListener.cpp.o", "antlr_frontend/SysYParserListener.cpp"],
+  "file": "antlr_frontend/SysYParserListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserBaseListener.cpp.o", "antlr_frontend/SysYParserBaseListener.cpp"],
+  "file": "antlr_frontend/SysYParserBaseListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserVisitor.cpp.o", "antlr_frontend/SysYParserVisitor.cpp"],
+  "file": "antlr_frontend/SysYParserVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParserBaseVisitor.cpp.o", "antlr_frontend/SysYParserBaseVisitor.cpp"],
+  "file": "antlr_frontend/SysYParserBaseVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_frontend/SysYParser.cpp.o", "antlr_frontend/SysYParser.cpp"],
+  "file": "antlr_frontend/SysYParser.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ConsoleErrorListener.cpp.o", "antlr_runtime/runtime/src/ConsoleErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/ConsoleErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/dfa/DFA.cpp.o", "antlr_runtime/runtime/src/dfa/DFA.cpp"],
+  "file": "antlr_runtime/runtime/src/dfa/DFA.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/dfa/DFAState.cpp.o", "antlr_runtime/runtime/src/dfa/DFAState.cpp"],
+  "file": "antlr_runtime/runtime/src/dfa/DFAState.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/dfa/DFASerializer.cpp.o", "antlr_runtime/runtime/src/dfa/DFASerializer.cpp"],
+  "file": "antlr_runtime/runtime/src/dfa/DFASerializer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/dfa/LexerDFASerializer.cpp.o", "antlr_runtime/runtime/src/dfa/LexerDFASerializer.cpp"],
+  "file": "antlr_runtime/runtime/src/dfa/LexerDFASerializer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ProxyErrorListener.cpp.o", "antlr_runtime/runtime/src/ProxyErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/ProxyErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/ErrorNodeImpl.cpp.o", "antlr_runtime/runtime/src/tree/ErrorNodeImpl.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/ErrorNodeImpl.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/ParseTree.cpp.o", "antlr_runtime/runtime/src/tree/ParseTree.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/ParseTree.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/Trees.cpp.o", "antlr_runtime/runtime/src/tree/Trees.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/Trees.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/ParseTreeWalker.cpp.o", "antlr_runtime/runtime/src/tree/ParseTreeWalker.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/ParseTreeWalker.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/IterativeParseTreeWalker.cpp.o", "antlr_runtime/runtime/src/tree/IterativeParseTreeWalker.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/IterativeParseTreeWalker.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathLexerErrorListener.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathLexerErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathLexerErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathTokenAnywhereElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathRuleAnywhereElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathWildcardAnywhereElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPath.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPath.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPath.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathTokenElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathTokenElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathTokenElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathWildcardElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathWildcardElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathWildcardElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathLexer.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathLexer.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathLexer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/xpath/XPathRuleElement.cpp.o", "antlr_runtime/runtime/src/tree/xpath/XPathRuleElement.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/xpath/XPathRuleElement.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/ParseTreeListener.cpp.o", "antlr_runtime/runtime/src/tree/ParseTreeListener.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/ParseTreeListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/ParseTreeVisitor.cpp.o", "antlr_runtime/runtime/src/tree/ParseTreeVisitor.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/ParseTreeVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp.o", "antlr_runtime/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/ParseTreePatternMatcher.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/TextChunk.cpp.o", "antlr_runtime/runtime/src/tree/pattern/TextChunk.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/TextChunk.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/ParseTreePattern.cpp.o", "antlr_runtime/runtime/src/tree/pattern/ParseTreePattern.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/ParseTreePattern.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/ParseTreeMatch.cpp.o", "antlr_runtime/runtime/src/tree/pattern/ParseTreeMatch.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/ParseTreeMatch.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/TagChunk.cpp.o", "antlr_runtime/runtime/src/tree/pattern/TagChunk.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/TagChunk.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/Chunk.cpp.o", "antlr_runtime/runtime/src/tree/pattern/Chunk.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/Chunk.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/TokenTagToken.cpp.o", "antlr_runtime/runtime/src/tree/pattern/TokenTagToken.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/TokenTagToken.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/pattern/RuleTagToken.cpp.o", "antlr_runtime/runtime/src/tree/pattern/RuleTagToken.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/pattern/RuleTagToken.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/tree/TerminalNodeImpl.cpp.o", "antlr_runtime/runtime/src/tree/TerminalNodeImpl.cpp"],
+  "file": "antlr_runtime/runtime/src/tree/TerminalNodeImpl.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/TokenSource.cpp.o", "antlr_runtime/runtime/src/TokenSource.cpp"],
+  "file": "antlr_runtime/runtime/src/TokenSource.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Recognizer.cpp.o", "antlr_runtime/runtime/src/Recognizer.cpp"],
+  "file": "antlr_runtime/runtime/src/Recognizer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/DiagnosticErrorListener.cpp.o", "antlr_runtime/runtime/src/DiagnosticErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/DiagnosticErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/CharStream.cpp.o", "antlr_runtime/runtime/src/CharStream.cpp"],
+  "file": "antlr_runtime/runtime/src/CharStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/CommonToken.cpp.o", "antlr_runtime/runtime/src/CommonToken.cpp"],
+  "file": "antlr_runtime/runtime/src/CommonToken.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/internal/Synchronization.cpp.o", "antlr_runtime/runtime/src/internal/Synchronization.cpp"],
+  "file": "antlr_runtime/runtime/src/internal/Synchronization.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ANTLRErrorListener.cpp.o", "antlr_runtime/runtime/src/ANTLRErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/ANTLRErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/RuleContext.cpp.o", "antlr_runtime/runtime/src/RuleContext.cpp"],
+  "file": "antlr_runtime/runtime/src/RuleContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/InterpreterRuleContext.cpp.o", "antlr_runtime/runtime/src/InterpreterRuleContext.cpp"],
+  "file": "antlr_runtime/runtime/src/InterpreterRuleContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/UnbufferedTokenStream.cpp.o", "antlr_runtime/runtime/src/UnbufferedTokenStream.cpp"],
+  "file": "antlr_runtime/runtime/src/UnbufferedTokenStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/CommonTokenStream.cpp.o", "antlr_runtime/runtime/src/CommonTokenStream.cpp"],
+  "file": "antlr_runtime/runtime/src/CommonTokenStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/NoViableAltException.cpp.o", "antlr_runtime/runtime/src/NoViableAltException.cpp"],
+  "file": "antlr_runtime/runtime/src/NoViableAltException.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/RecognitionException.cpp.o", "antlr_runtime/runtime/src/RecognitionException.cpp"],
+  "file": "antlr_runtime/runtime/src/RecognitionException.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/CommonTokenFactory.cpp.o", "antlr_runtime/runtime/src/CommonTokenFactory.cpp"],
+  "file": "antlr_runtime/runtime/src/CommonTokenFactory.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/FailedPredicateException.cpp.o", "antlr_runtime/runtime/src/FailedPredicateException.cpp"],
+  "file": "antlr_runtime/runtime/src/FailedPredicateException.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/support/Arrays.cpp.o", "antlr_runtime/runtime/src/support/Arrays.cpp"],
+  "file": "antlr_runtime/runtime/src/support/Arrays.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/support/StringUtils.cpp.o", "antlr_runtime/runtime/src/support/StringUtils.cpp"],
+  "file": "antlr_runtime/runtime/src/support/StringUtils.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/support/Utf8.cpp.o", "antlr_runtime/runtime/src/support/Utf8.cpp"],
+  "file": "antlr_runtime/runtime/src/support/Utf8.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/support/Any.cpp.o", "antlr_runtime/runtime/src/support/Any.cpp"],
+  "file": "antlr_runtime/runtime/src/support/Any.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/support/CPPUtils.cpp.o", "antlr_runtime/runtime/src/support/CPPUtils.cpp"],
+  "file": "antlr_runtime/runtime/src/support/CPPUtils.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/RuntimeMetaData.cpp.o", "antlr_runtime/runtime/src/RuntimeMetaData.cpp"],
+  "file": "antlr_runtime/runtime/src/RuntimeMetaData.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ParserInterpreter.cpp.o", "antlr_runtime/runtime/src/ParserInterpreter.cpp"],
+  "file": "antlr_runtime/runtime/src/ParserInterpreter.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/misc/MurmurHash.cpp.o", "antlr_runtime/runtime/src/misc/MurmurHash.cpp"],
+  "file": "antlr_runtime/runtime/src/misc/MurmurHash.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/misc/Predicate.cpp.o", "antlr_runtime/runtime/src/misc/Predicate.cpp"],
+  "file": "antlr_runtime/runtime/src/misc/Predicate.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/misc/IntervalSet.cpp.o", "antlr_runtime/runtime/src/misc/IntervalSet.cpp"],
+  "file": "antlr_runtime/runtime/src/misc/IntervalSet.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/misc/Interval.cpp.o", "antlr_runtime/runtime/src/misc/Interval.cpp"],
+  "file": "antlr_runtime/runtime/src/misc/Interval.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/misc/InterpreterDataReader.cpp.o", "antlr_runtime/runtime/src/misc/InterpreterDataReader.cpp"],
+  "file": "antlr_runtime/runtime/src/misc/InterpreterDataReader.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/TokenStreamRewriter.cpp.o", "antlr_runtime/runtime/src/TokenStreamRewriter.cpp"],
+  "file": "antlr_runtime/runtime/src/TokenStreamRewriter.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ANTLRFileStream.cpp.o", "antlr_runtime/runtime/src/ANTLRFileStream.cpp"],
+  "file": "antlr_runtime/runtime/src/ANTLRFileStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/RuleContextWithAltNum.cpp.o", "antlr_runtime/runtime/src/RuleContextWithAltNum.cpp"],
+  "file": "antlr_runtime/runtime/src/RuleContextWithAltNum.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ListTokenSource.cpp.o", "antlr_runtime/runtime/src/ListTokenSource.cpp"],
+  "file": "antlr_runtime/runtime/src/ListTokenSource.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/DefaultErrorStrategy.cpp.o", "antlr_runtime/runtime/src/DefaultErrorStrategy.cpp"],
+  "file": "antlr_runtime/runtime/src/DefaultErrorStrategy.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/BaseErrorListener.cpp.o", "antlr_runtime/runtime/src/BaseErrorListener.cpp"],
+  "file": "antlr_runtime/runtime/src/BaseErrorListener.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/BufferedTokenStream.cpp.o", "antlr_runtime/runtime/src/BufferedTokenStream.cpp"],
+  "file": "antlr_runtime/runtime/src/BufferedTokenStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/LexerInterpreter.cpp.o", "antlr_runtime/runtime/src/LexerInterpreter.cpp"],
+  "file": "antlr_runtime/runtime/src/LexerInterpreter.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Lexer.cpp.o", "antlr_runtime/runtime/src/Lexer.cpp"],
+  "file": "antlr_runtime/runtime/src/Lexer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/BailErrorStrategy.cpp.o", "antlr_runtime/runtime/src/BailErrorStrategy.cpp"],
+  "file": "antlr_runtime/runtime/src/BailErrorStrategy.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNDeserializer.cpp.o", "antlr_runtime/runtime/src/atn/ATNDeserializer.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNDeserializer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/EpsilonTransition.cpp.o", "antlr_runtime/runtime/src/atn/EpsilonTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/EpsilonTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LL1Analyzer.cpp.o", "antlr_runtime/runtime/src/atn/LL1Analyzer.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LL1Analyzer.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerIndexedCustomAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerIndexedCustomAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerIndexedCustomAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/DecisionState.cpp.o", "antlr_runtime/runtime/src/atn/DecisionState.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/DecisionState.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ParserATNSimulator.cpp.o", "antlr_runtime/runtime/src/atn/ParserATNSimulator.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ParserATNSimulator.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerATNConfig.cpp.o", "antlr_runtime/runtime/src/atn/LexerATNConfig.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerATNConfig.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNState.cpp.o", "antlr_runtime/runtime/src/atn/ATNState.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNState.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/SingletonPredictionContext.cpp.o", "antlr_runtime/runtime/src/atn/SingletonPredictionContext.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/SingletonPredictionContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerChannelAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerChannelAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerChannelAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerPushModeAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerPushModeAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerPushModeAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/Transition.cpp.o", "antlr_runtime/runtime/src/atn/Transition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/Transition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ActionTransition.cpp.o", "antlr_runtime/runtime/src/atn/ActionTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ActionTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ContextSensitivityInfo.cpp.o", "antlr_runtime/runtime/src/atn/ContextSensitivityInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ContextSensitivityInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredictionMode.cpp.o", "antlr_runtime/runtime/src/atn/PredictionMode.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredictionMode.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/StarLoopbackState.cpp.o", "antlr_runtime/runtime/src/atn/StarLoopbackState.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/StarLoopbackState.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/RangeTransition.cpp.o", "antlr_runtime/runtime/src/atn/RangeTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/RangeTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/AtomTransition.cpp.o", "antlr_runtime/runtime/src/atn/AtomTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/AtomTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/RuleTransition.cpp.o", "antlr_runtime/runtime/src/atn/RuleTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/RuleTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/TransitionType.cpp.o", "antlr_runtime/runtime/src/atn/TransitionType.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/TransitionType.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredictionContextMergeCache.cpp.o", "antlr_runtime/runtime/src/atn/PredictionContextMergeCache.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredictionContextMergeCache.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ParseInfo.cpp.o", "antlr_runtime/runtime/src/atn/ParseInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ParseInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATN.cpp.o", "antlr_runtime/runtime/src/atn/ATN.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATN.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/SemanticContext.cpp.o", "antlr_runtime/runtime/src/atn/SemanticContext.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/SemanticContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/AmbiguityInfo.cpp.o", "antlr_runtime/runtime/src/atn/AmbiguityInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/AmbiguityInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredicateTransition.cpp.o", "antlr_runtime/runtime/src/atn/PredicateTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredicateTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerMoreAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerMoreAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerMoreAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerATNSimulator.cpp.o", "antlr_runtime/runtime/src/atn/LexerATNSimulator.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerATNSimulator.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredictionContextCache.cpp.o", "antlr_runtime/runtime/src/atn/PredictionContextCache.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredictionContextCache.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNConfig.cpp.o", "antlr_runtime/runtime/src/atn/ATNConfig.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNConfig.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNSimulator.cpp.o", "antlr_runtime/runtime/src/atn/ATNSimulator.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNSimulator.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredicateEvalInfo.cpp.o", "antlr_runtime/runtime/src/atn/PredicateEvalInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredicateEvalInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/NotSetTransition.cpp.o", "antlr_runtime/runtime/src/atn/NotSetTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/NotSetTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerActionExecutor.cpp.o", "antlr_runtime/runtime/src/atn/LexerActionExecutor.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerActionExecutor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerSkipAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerSkipAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerSkipAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PrecedencePredicateTransition.cpp.o", "antlr_runtime/runtime/src/atn/PrecedencePredicateTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PrecedencePredicateTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/PredictionContext.cpp.o", "antlr_runtime/runtime/src/atn/PredictionContext.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/PredictionContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/SetTransition.cpp.o", "antlr_runtime/runtime/src/atn/SetTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/SetTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ProfilingATNSimulator.cpp.o", "antlr_runtime/runtime/src/atn/ProfilingATNSimulator.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ProfilingATNSimulator.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNStateType.cpp.o", "antlr_runtime/runtime/src/atn/ATNStateType.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNStateType.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/DecisionInfo.cpp.o", "antlr_runtime/runtime/src/atn/DecisionInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/DecisionInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNDeserializationOptions.cpp.o", "antlr_runtime/runtime/src/atn/ATNDeserializationOptions.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNDeserializationOptions.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/DecisionEventInfo.cpp.o", "antlr_runtime/runtime/src/atn/DecisionEventInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/DecisionEventInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ErrorInfo.cpp.o", "antlr_runtime/runtime/src/atn/ErrorInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ErrorInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ATNConfigSet.cpp.o", "antlr_runtime/runtime/src/atn/ATNConfigSet.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ATNConfigSet.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/WildcardTransition.cpp.o", "antlr_runtime/runtime/src/atn/WildcardTransition.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/WildcardTransition.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/ArrayPredictionContext.cpp.o", "antlr_runtime/runtime/src/atn/ArrayPredictionContext.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/ArrayPredictionContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerCustomAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerCustomAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerCustomAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerTypeAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerTypeAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerTypeAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/OrderedATNConfigSet.cpp.o", "antlr_runtime/runtime/src/atn/OrderedATNConfigSet.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/OrderedATNConfigSet.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerPopModeAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerPopModeAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerPopModeAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LookaheadEventInfo.cpp.o", "antlr_runtime/runtime/src/atn/LookaheadEventInfo.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LookaheadEventInfo.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/atn/LexerModeAction.cpp.o", "antlr_runtime/runtime/src/atn/LexerModeAction.cpp"],
+  "file": "antlr_runtime/runtime/src/atn/LexerModeAction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ParserRuleContext.cpp.o", "antlr_runtime/runtime/src/ParserRuleContext.cpp"],
+  "file": "antlr_runtime/runtime/src/ParserRuleContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/IntStream.cpp.o", "antlr_runtime/runtime/src/IntStream.cpp"],
+  "file": "antlr_runtime/runtime/src/IntStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/WritableToken.cpp.o", "antlr_runtime/runtime/src/WritableToken.cpp"],
+  "file": "antlr_runtime/runtime/src/WritableToken.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/LexerNoViableAltException.cpp.o", "antlr_runtime/runtime/src/LexerNoViableAltException.cpp"],
+  "file": "antlr_runtime/runtime/src/LexerNoViableAltException.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Exceptions.cpp.o", "antlr_runtime/runtime/src/Exceptions.cpp"],
+  "file": "antlr_runtime/runtime/src/Exceptions.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/UnbufferedCharStream.cpp.o", "antlr_runtime/runtime/src/UnbufferedCharStream.cpp"],
+  "file": "antlr_runtime/runtime/src/UnbufferedCharStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ANTLRInputStream.cpp.o", "antlr_runtime/runtime/src/ANTLRInputStream.cpp"],
+  "file": "antlr_runtime/runtime/src/ANTLRInputStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Token.cpp.o", "antlr_runtime/runtime/src/Token.cpp"],
+  "file": "antlr_runtime/runtime/src/Token.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/TokenStream.cpp.o", "antlr_runtime/runtime/src/TokenStream.cpp"],
+  "file": "antlr_runtime/runtime/src/TokenStream.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Parser.cpp.o", "antlr_runtime/runtime/src/Parser.cpp"],
+  "file": "antlr_runtime/runtime/src/Parser.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/ANTLRErrorStrategy.cpp.o", "antlr_runtime/runtime/src/ANTLRErrorStrategy.cpp"],
+  "file": "antlr_runtime/runtime/src/ANTLRErrorStrategy.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/Vocabulary.cpp.o", "antlr_runtime/runtime/src/Vocabulary.cpp"],
+  "file": "antlr_runtime/runtime/src/Vocabulary.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/antlr_runtime/runtime/src/InputMismatchException.cpp.o", "antlr_runtime/runtime/src/InputMismatchException.cpp"],
+  "file": "antlr_runtime/runtime/src/InputMismatchException.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Instruction.cpp.o", "src/midend/Instruction.cpp"],
+  "file": "src/midend/Instruction.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/User.cpp.o", "src/midend/User.cpp"],
+  "file": "src/midend/User.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/IRContext.cpp.o", "src/midend/IRContext.cpp"],
+  "file": "src/midend/IRContext.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/BasicBlock.cpp.o", "src/midend/BasicBlock.cpp"],
+  "file": "src/midend/BasicBlock.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/GlobalVariable.cpp.o", "src/midend/GlobalVariable.cpp"],
+  "file": "src/midend/GlobalVariable.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/IRVisitor.cpp.o", "src/midend/IRVisitor.cpp"],
+  "file": "src/midend/IRVisitor.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Type.cpp.o", "src/midend/Type.cpp"],
+  "file": "src/midend/Type.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Function.cpp.o", "src/midend/Function.cpp"],
+  "file": "src/midend/Function.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Constant.cpp.o", "src/midend/Constant.cpp"],
+  "file": "src/midend/Constant.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Value.cpp.o", "src/midend/Value.cpp"],
+  "file": "src/midend/Value.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Module.cpp.o", "src/midend/Module.cpp"],
+  "file": "src/midend/Module.cpp"
+}]

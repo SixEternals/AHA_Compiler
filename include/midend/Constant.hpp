@@ -1,7 +1,7 @@
 #ifndef CONSTANT_HPP
 #define CONSTANT_HPP
 
-#include "midend/Instruction.hpp"
+#include "Instruction.hpp"
 #include "User.hpp"
 #include "Value.hpp"
 #include <cassert>
@@ -9,6 +9,7 @@
 #include <map>
 #include <memory>
 
+class Instruction;
 class Type;
 class ArrayType;
 class ConstantInt;
@@ -21,11 +22,22 @@ public:
     std::unordered_map<bool, std::unique_ptr<ConstantInt>> cached_bool;
     std::unordered_map<float, std::unique_ptr<ConstantFP>> cached_float;
     std::unordered_map<Type *, std::unique_ptr<ConstantZero>> cached_zero;
+
+    void clear() {
+        cached_int.clear();
+        cached_bool.clear();
+        cached_float.clear();
+        cached_zero.clear();
+    }
 };
 
 class Constant : public User {
 public:
     static ConstManager *manager_;
+    static ConstManager *getManager();
+    // [`static`]
+    // 根据两个 Constant 对象（lhs 和 rhs）以及一个操作符（bin_op），生成一个新的 Constant 对象。
+    // 会匹配lhs和rhs是不是同一类型
     static Constant *get(Constant *lhs, Instruction::OpID bin_op,
                          Constant *rhs);
 
@@ -103,7 +115,7 @@ public:
     ~ConstantArray() = default;
 
     static ConstantArray *
-    get(ArrayType *ty, std::map<int, Value *> const &vals_map, size_t int size);
+    get(ArrayType *ty, std::map<int, Value *> const &vals_map, size_t size);
 
     Constant *getElementValue(int index) {
         if (init_val_map[index]) {
@@ -120,7 +132,7 @@ public:
 
 private:
     ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
-                  size_t int size);
+                  size_t size);
 
 private:
     std::map<int, Value *> init_val_map;

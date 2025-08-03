@@ -19,7 +19,7 @@ target("aha")
 
     -- 添加源文件
     add_files("antlr_frontend/*.cpp")
-    add_files("antlr_runtime/runtime/src")
+    add_files("antlr_runtime/runtime/src/**.cpp")
     add_files("src/*.cpp")
     add_files("src/midend/*.cpp")
 

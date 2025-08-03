@@ -1,4 +1,5 @@
 #include "midend/Instruction.hpp"
+#include "midend/BasicBlock.hpp"
 #include "midend/Constant.hpp"
 #include "midend/Function.hpp"
 #include "midend/GlobalVariable.hpp"

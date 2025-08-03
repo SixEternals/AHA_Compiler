@@ -2,7 +2,7 @@
 #include "midend/Type.hpp"
 
 IRContext::IRContext() {
-    Type::context = this;
+  // Type::context = this;
     void_ty_ = new Type(Type::VoidTyID);
     label_ty_ = new Type(Type::LabelTyID);
     int1_ty_ = new IntegerType(1);
@@ -80,5 +80,8 @@ IRContext::~IRContext() {
 
 IRContext &IRContext::getInstance() {
     static IRContext instance;
+    if (Type::context == nullptr) {
+        Type::context = &instance;
+    }
     return instance;
 }

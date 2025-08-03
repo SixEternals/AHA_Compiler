@@ -771,6 +771,123 @@ new_bb1:
 // 这种情况下，新基本块 new_bb1 无法独立存在，依赖于原始基本块 bb1。
 ```
 
+# Module
+```cpp
+Function* Module::getMainFunction() {
+    return *(functions_list_.rbegin());
+}
+```
+这里返回最后一个，因为一般在构建Module的过程中，一般最后添加[`main`]函数。其他函数可以在main之前定义、调用，而main是入口点，放最后 合情合理
+
+## Module做CFG可达性检查  
+```cpp
+/*
+1. 检查所有的function，但是跳过声明
+2. BFS检查BB可达性
+3. 清除不可达BB内部的use关系
+*/
+// 在 IR 构造或变换之后对 整张函数图 做完整性和引用检查，确保 IR
+// 没有悬空引用、不一致的数据流、或语义错误。
+/*
+控制流图检查：检查所有基本块是否是可达的。
+数据流引用校验：检查每个指令的操作数是否合法，且没有 dangling use。
+Use-Def 清理后检查：确保 use 列表全部为空（即无指令仍引用它们）。
+*/
+void Module::breakCheck(){
+    /* Part 1
+    检查所有的function，跳过[`声明`]
+    */
+    for(auto f:functions_list_){
+        if(f->isDeclaration())
+            continue;
+        // 入口function不应该有preBB
+        auto entry=f->getEntryBlock();
+        assert(entry->getPreBasicBlocks().empty());
+
+        // BFS 可达性检查：
+        /*
+        遍历控制流图（CFG）
+        收集：
+            所有可达的基本块 reachable
+            所有指令 ins_list（用于后续引用清理）
+        */
+        std::list<BasicBlock*>work_list{entry};
+        std::set<BasicBlock*> reachable;
+        std::vector<Instruction*> ins_list;
+        do {
+            auto curbb=work_list.front();
+            work_list.pop_front();
+            reachable.insert(curbb);
+            for(auto s:curbb->getSuccBasicBlocks()){
+                if(reachable.count(s))
+                    continue;
+                work_list.push_back(s);
+            }
+            ins_list.insert(ins_list.end(),curbb->getInstructions().begin(),curbb->getInstructions().end());
+        }while(!work_list.empty());
+        // 不可达BB检查
+        for(auto b:f->getBasicBlocks()){
+            assert(reachable.count(b));
+        }
+
+        for(auto i:ins_list){
+            for(auto o:i->getOperands()){
+                if(o==0)
+                    continue;
+                if(auto op_i=dynamic_cast<Instruction*>(o))
+                {
+                    
+                    // assert(0);
+                }else if(auto f=dynamic_cast<Function*>(o)){
+                    f->removeUse(i);
+                }else if(auto g=dynamic_cast<GlobalVariable*>(o)){
+                    g->removeUse(i);
+                }else if(auto constant=dynamic_cast<Constant*>(o)){
+                    constant->removeUse(i);
+                }else if(auto bb=dynamic_cast<BasicBlock*>(o)){
+                    bb->removeUse(i);
+                }else if(auto arg=dynamic_cast<Argument*>(o)){
+                    arg->removeUse(i);
+                }else {
+                    assert(0);
+                }
+            }
+        }
+        // 检查是否清理干净
+        for(auto i:ins_list){
+            assert(i->useEmpty());
+        }
+    }
+    for(auto g:globals_list_){
+        assert(g->useEmpty());
+    }
+    for(auto f:functions_list_){
+        assert(f->useEmpty());
+        for(auto arg:f->getArgs()){
+            assert(arg->useEmpty());
+        }
+        for(auto b:f->getBasicBlocks()){
+            assert(b->useEmpty());
+        }
+    }
+    auto constman=builder_.get();
+}
+```
+
+### CFG
+      entry
+       |
+       v
+      bb1
+     /   \
+   v       v
+ bb2     bb3
+           |
+           v
+         bb4
+
+LLVM IR不是特别强需显式的Graph和Edge，使用preBB和sussBB就够用了
+
 # 三地址码
 
 ```IR
@@ -805,6 +922,69 @@ new_bb1:
 | `shl X, 64`       | `0`       | 移位超界变成 0（具体架构相关） |
 | `phi X, X`        | `X`       | 同一个值的 φ 节点无意义        |
 
+# ASM部分
+
+## runtime preemption specifier
+(runtime preemption specifier)[https://llvm.org/docs/LangRef.html#runtime-preemption-specifiers]
+运行时可抢占性说明符，用于指明某个符号（函数或全局变量）在运行时是否可能被替换或重定向。这个说明符影响编译器生成的代码是否需要保留动态链接/重定向的能力（比如通过 GOT/PLT）。
+
+LLVM IR 中有两个 runtime preemption specifier：
+| 说明符            | 含义                                                     |
+| ----------------- | -------------------------------------------------------- |
+| `dso_local`       | **不会**被运行时重定向，只在本 DSO（当前编译单元）中使用 |
+| `dso_preemptable` | **可能**在运行时被重定向或替换，例如来自共享库的定义     |
+这两个属于 LLVM 的 symbol property 系统，是链接语义的重要组成部分。
+
+在[`ELF + Linux 动态链接`]环境下（尤其是 Linux 下的 ELF 模型），同一个符号可能来自多个模块（比如主程序、共享库）。链接器会决定“到底该用哪个”。
+而编译器不知道链接器的选择，所以它必须保守地处理跨模块引用（可能生成间接调用）。
+但：
+  如果你明确告诉编译器：这个符号绝对只在本模块中使用，它永远不会在运行时被别的模块替换
+  那么它可以更大胆地优化，比如直接调用、内联、去除 GOT/PLT 跳转
+
+### DSO、GOT、PLT
+1. DSO（Dynamic Shared Object），也就是 .so 文件
+
+2. GOT（Global Offset Table），全局偏移表，一种间接跳转机制，用于支持运行时符号重定向（如从 .so 加载的函数）
+  用于：
+    1. 保存变量/函数的地址
+    2. 每个需要“可运行时替换”的符号（比如在 .so 里定义）会在 GOT 表中占一个槽位
+    3. 代码通过读取 GOT 槽位得到符号地址
+  好处：
+    “我不知道 foo() 是不是运行时会来自别的库，我就通过 GOT[foo] 来调用它，等运行时再修这个地址”
+
+3. PLT（Procedure Linkage Table），过程链接表，专门用于 延迟绑定（Lazy Binding） 的函数调用机制
+   用于：
+    1. 提供“中转代码”跳转到实际函数地址（函数入口）
+    2. 初始情况下跳转到运行时解析函数地址的代码
+    3. 一旦解析完成，GOT 表会被填充为正确的地址
+
+```shell
+; 某个函数 foo() 定义在 libfoo.so 中
+
+main():
+    call foo@PLT     ; 实际跳到 PLT 表的 foo 条目
+-----------------------------
+foo@PLT:
+    jmp *GOT[foo]     ; 一开始 GOT[foo] 指向解析器
+    ...
+    push symbol_id
+    jmp _dl_runtime_resolve
+
+GOT[foo] = foo_resolver  →  最终设为 foo 真正的地址
+```
+        main() 调用 foo()
+           ↓
+       call foo@PLT
+           ↓
+  foo@PLT 中: jmp *GOT[foo]
+           ↓
+第一次: GOT[foo] → 动态解析器
+           ↓
+动态解析器找到 libfoo.so 中的 foo
+并更新 GOT[foo] ← foo 的真实地址
+           ↓
+第二次以后: 直接 jmp 到 foo()
+
 # 问题
 
 ## incomplete type error
@@ -825,3 +1005,10 @@ export PATH=$(echo $PATH | tr ':' '\n' | grep -v 'anaconda' | paste -sd:)
 ./xmake_run.sh || 或其他xmake自定义命令
 ```
 
+# 用法
+
+## 初始化ConstantManager
+```cpp
+// ▲初始化 Constant 管理器
+    Constant::manager_ = new ConstManager();
+```

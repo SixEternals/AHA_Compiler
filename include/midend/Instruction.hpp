@@ -134,9 +134,10 @@ public:
     //& create instruction, auto insert to bb, ty here is result type
     Instruction(Type *ty, OpID id, size_t num_ops, BasicBlock *parent);
     Instruction(Type *ty, OpID id, size_t num_ops);
+
     // todo: 不知道会不会让Instruction正确被析构
     // 关联函数：void BasicBlock::deleteInstr(Instruction *instr)
-    virtual ~Instruction();
+    // virtual ~Instruction();
 
     inline BasicBlock const *getParent() const {
         return parent_;
@@ -622,6 +623,7 @@ private:
 };
 
 class LoadInst : public Instruction {
+public:
     static LoadInst *createLoad(Type *ty, Value *ptr, BasicBlock *bb);
 
     Value *getLVal() {

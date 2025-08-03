@@ -19,6 +19,7 @@ private:
 
 public:
     static IRContext &getInstance();
+    // static void reset();
     explicit IRContext();
     ~IRContext();
 

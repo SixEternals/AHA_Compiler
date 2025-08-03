@@ -9,22 +9,29 @@
 //& ConstantInt
 ConstManager *Constant::manager_{nullptr};
 
-ConstantInt *ConstantInt::get(int val) {
-    if (Constant::manager_->cached_int.find(val) !=
-        Constant::manager_->cached_int.end()) {
-        return Constant::manager_->cached_int[val].get();
+ConstManager *Constant::getManager() {
+    if (manager_ == nullptr) {
+        manager_ = new ConstManager();
     }
-    return (Constant::manager_->cached_int[val] = std::unique_ptr<ConstantInt>(
+    return manager_;
+}
+
+ConstantInt *ConstantInt::get(int val) {
+    auto manager = Constant::getManager();
+    if (manager->cached_int.find(val) != manager->cached_int.end()) {
+        return manager->cached_int[val].get();
+    }
+    return (manager->cached_int[val] = std::unique_ptr<ConstantInt>(
                 new ConstantInt(Type::getInt32Type(), val)))
         .get();
 }
 
 ConstantInt *ConstantInt::get(bool val) {
-    if (Constant::manager_->cached_bool.find(val) !=
-        Constant::manager_->cached_bool.end()) {
-        return Constant::manager_->cached_bool[val].get();
+    auto manager = Constant::getManager();
+    if (manager->cached_bool.find(val) != manager->cached_bool.end()) {
+        return manager->cached_bool[val].get();
     }
-    return (Constant::manager_->cached_bool[val] = std::unique_ptr<ConstantInt>(
+    return (manager->cached_bool[val] = std::unique_ptr<ConstantInt>(
                 new ConstantInt(Type::getInt1Type(), val ? 1 : 0)))
         .get();
 }
@@ -101,7 +108,7 @@ ConstantInt *ConstantInt::getFromCmp(Constant *lhs, CmpOp cmp_op,
     if (ConstantInt *ilhs = dynamic_cast<ConstantInt *>(lhs),
         *irhs = dynamic_cast<ConstantInt *>(rhs);
         ilhs && irhs) {
-        ret = ConstantInt::getFromCmp(ilhs, cmp_op, irhs);
+        ret = ConstantInt::getFromICmp(ilhs, cmp_op, irhs);
     } else if (ConstantFP *flhs = dynamic_cast<ConstantFP *>(lhs),
                *frhs = dynamic_cast<ConstantFP *>(rhs);
                flhs && frhs) {
@@ -178,11 +185,11 @@ ConstantFP *ConstantFP::getFromBin(ConstantFP *lhs, Instruction::OpID bin_op,
 
 //& ConstantFP
 ConstantFP *ConstantFP::get(float val) {
-    if (Constant::manager_->cached_float.find(val) !=
-        Constant::manager_->cached_float.end()) {
-        return Constant::manager_->cached_float[val].get();
+    auto manager = Constant::getManager();
+    if (manager->cached_float.find(val) != manager->cached_float.end()) {
+        return manager->cached_float[val].get();
     }
-    return (Constant::manager_->cached_float[val] = std::unique_ptr<ConstantFP>(
+    return (manager->cached_float[val] = std::unique_ptr<ConstantFP>(
                 new ConstantFP(Type::getFloatType(), val)))
         .get();
 }
@@ -198,11 +205,12 @@ std::string ConstantFP::print() {
 
 //& ConstantZero
 ConstantZero *ConstantZero::get(Type *ty) {
-    if (not Constant::manager_->cached_zero[ty]) {
-        Constant::manager_->cached_zero[ty] =
+    auto manager = Constant::getManager();
+    if (not manager->cached_zero[ty]) {
+        manager->cached_zero[ty] =
             std::unique_ptr<ConstantZero>(new ConstantZero(ty));
     }
-    return Constant::manager_->cached_zero[ty].get();
+    return manager->cached_zero[ty].get();
 }
 
 std::string ConstantZero::print() {
@@ -211,13 +219,19 @@ std::string ConstantZero::print() {
 
 //& ConstantArray
 ConstantArray::ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
-                             size_t int size)
+                             size_t size)
     : Constant(ty, "", size) {
     for (int i = 0; i < size; i++) {
         if (vals.find(i) != vals.end()) {
             setOperand(i, vals.find(i)->second);
         } else {
-            setOperand(i, vals.find(-1)->second);
+            auto def_it = vals.find(-1);
+            if (def_it != vals.end()) {
+                setOperand(i, def_it->second);
+            } else {
+                // 如果没有提供默认值，则使用 ConstantZero
+                setOperand(i, ConstantZero::get(ty->getElementType()));
+            }
         }
     }
     array_size = size;
@@ -226,21 +240,36 @@ ConstantArray::ConstantArray(ArrayType *ty, std::map<int, Value *> const &vals,
 
 ConstantArray *ConstantArray::get(ArrayType *ty,
                                   std::map<int, Value *> const &vals_map,
-                                  size_t int size) {
+                                  size_t size) {
     return new ConstantArray(ty, vals_map, size);
 }
 
 std::string ConstantArray::print() {
     std::string const_ir;
     const_ir += "[";
-    const_ir += this->getType()->getArrayElementType()->print();
-    const_ir += " ";
-    const_ir += getElementValue(0)->print();
+    auto elem_ty_str = this->getType()->getArrayElementType()->print();
+
+    if (this->getSizeOfArray() > 0) {
+        const_ir += elem_ty_str;
+        const_ir += " ";
+        auto val = getElementValue(0);
+        if (val) {
+            const_ir += val->print();
+        } else {
+            const_ir += "undef"; // or some other indicator of null
+        }
+    }
+
     for (int i = 1; i < this->getSizeOfArray(); i++) {
         const_ir += ", ";
-        const_ir += this->getType()->getArrayElementType()->print();
+        const_ir += elem_ty_str;
         const_ir += " ";
-        const_ir += getElementValue(i)->print();
+        auto val = getElementValue(i);
+        if (val) {
+            const_ir += val->print();
+        } else {
+            const_ir += "undef"; // or some other indicator of null
+        }
     }
     const_ir += "]";
     return const_ir;

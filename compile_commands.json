@@ -83,4 +83,9 @@
   "directory": "/home/pama/code/AHA",
   "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Value.cpp.o", "src/midend/Value.cpp"],
   "file": "src/midend/Value.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Module.cpp.o", "src/midend/Module.cpp"],
+  "file": "src/midend/Module.cpp"
 }]
