@@ -98,10 +98,10 @@ Module::~Module() {
     for (auto g: globals_list_) {
         delete g;
     }
-    Constant::manager_->cached_bool.clear();
-    Constant::manager_->cached_int.clear();
-    Constant::manager_->cached_float.clear();
-    Constant::manager_->cached_zero.clear();
+    Constant::getManager()->cached_bool.clear();
+    Constant::getManager()->cached_int.clear();
+    Constant::getManager()->cached_float.clear();
+    Constant::getManager()->cached_zero.clear();
 }
 
 void Module::addFunction(Function *f) {

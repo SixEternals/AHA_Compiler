@@ -27,6 +27,13 @@
   - [.sy获取途径](#sy获取途径)
   - [防止conda环境影响xmake](#防止conda环境影响xmake)
 
+# Constant部分
+ConstantManager
+Constant: 继承自User
+ConstantInt
+ConstantFP: [`Constant Float Zero`]
+ConstantZero
+ConstantArray
 
 # IRGen部分
 
@@ -67,6 +74,22 @@
 ## IRGen继承自IRVisitor
 
 # Instruction部分
+
+## Array数组维度管理
+    /*
+     * 可以理解成Length * BaseType
+     * BaseType: 数组元素的类型 e.g. i32或是其他数组
+     * Length: 数组的长度
+     * lengthList: 保存数组的维度信息
+     * e.g. [3 x [2 x i32]]:
+     * 长度为3的数组，数组元素是长度为2的32位有符号整数数组
+     * 相当于C/C++中的int[3][2]
+     * 这时lengthList为[3,
+     * 2]，第一个元素表示第一维的长度，第二个元素表示第二维的长度
+     * length存储的是第一维的长度，baseType存储的是第二维的类型
+     * needInit: 假如代码为int a[2][3] = {{1,2},{3,4}}时
+     * 需要设为true，否则不需要
+     */
 
 ## br
 
@@ -888,6 +911,21 @@ void Module::breakCheck(){
 
 LLVM IR不是特别强需显式的Graph和Edge，使用preBB和sussBB就够用了
 
+# IRBuilder/IRVisitor
+
+## FunctionType的生命周期管理
+诸如FunctionType这类，不是全局单例的raw pointer，可以交给IRBuilder来管理，如下：
+```cpp
+class IRVisitor/IRBuilder {
+    std::map<std::pair<Type *, std::vector<Type *>>, FunctionType *> function_map_;
+    ~IRViitor {
+      for (auto &[t, f: FunctionType* ] : function_map_) {
+        delete f;
+      }
+    }
+}
+```
+
 # 三地址码
 
 ```IR
@@ -1012,3 +1050,21 @@ export PATH=$(echo $PATH | tr ':' '\n' | grep -v 'anaconda' | paste -sd:)
 // ▲初始化 Constant 管理器
     Constant::manager_ = new ConstManager();
 ```
+
+# antlr4使用方法
+
+## constDef部分
+```cpp
+Type *var_type = parseStr2Ty(ctx->parent->children[1]->getText());
+```
+比如说有`const int a = 5;`
+ANTLR 解析为如下语法树结构:
+```cpp
+ConstDecl
+├── 'const'              // getChild(0)
+├── 'int'                // getChild(1)
+├── ConstDef (a = 5)     // getChild(2)
+├── ';'                  // getChild(3)
+```
+getChild(0) 是第一个子节点，通常是关键词如 'const'
+getChild(1) 是第二个子节点，可能是类型关键词 'int'、'float'

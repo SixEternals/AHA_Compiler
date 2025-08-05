@@ -7,3 +7,8 @@ build/
 
 
 # note.md
+.cache
+.vscode
+.wino
+.xmake
+*.wino

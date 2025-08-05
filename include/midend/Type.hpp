@@ -1,9 +1,9 @@
 #ifndef TYPE_HPP
 #define TYPE_HPP
 
+#include <list>
 #include <string>
 #include <vector>
-
 class IntegerType;
 class FloatType;
 class FunctionType;
@@ -37,7 +37,7 @@ public:
     };
 
     explicit Type(TypeID tid) : tid_(tid) {};
-    ~Type() = default;
+    virtual ~Type() = default;
 
     TypeID getTypeId() const {
         return tid_;
@@ -198,6 +198,7 @@ public:
 private:
     Type *contained_;     //& The element type of the array.
     size_t num_elements_; //& Number of elements in the array.
+    std::list<size_t> length_list;
 };
 
 /**
@@ -218,7 +219,7 @@ public:
     static FunctionType *get(Type *result, std::vector<Type *> params);
 
     static bool isValidReturnType(Type *ty);
-    static bool isValidArgumentType(Type *params);
+    static bool isValidArgumentType(Type *ty);
 
     size_t getNumOfArgs() const {
         return args_.size();

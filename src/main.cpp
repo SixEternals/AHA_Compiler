@@ -14,6 +14,7 @@ using namespace antlr4;
 // test begin
 #include "testFunction/functionIR.cpp"
 #include "testFunction/IRContextTest.cpp"
+
 int main(int argc, char **argv) {
     runMidendTests(); // 未解决
     // runIRContextTests();

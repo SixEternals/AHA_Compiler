@@ -7,13 +7,10 @@
 #include <sstream>
 
 //& ConstantInt
-ConstManager *Constant::manager_{nullptr};
-
+// 全局单例
 ConstManager *Constant::getManager() {
-    if (manager_ == nullptr) {
-        manager_ = new ConstManager();
-    }
-    return manager_;
+    static ConstManager manager;
+    return &manager;
 }
 
 ConstantInt *ConstantInt::get(int val) {

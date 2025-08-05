@@ -25,6 +25,7 @@ target("aha")
 
     -- 链接antlr_runtime静态库
     add_linkdirs("antlr_runtime/build")  -- .a文件的路径
+    add_linkdirs("antlr_runtime/runtime")  -- .a文件的路径
     add_links("antlr4-runtime")
 
 --

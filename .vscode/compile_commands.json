@@ -721,6 +721,11 @@
 },
 {
   "directory": "/home/pama/code/AHA",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/Scope.cpp.o", "src/midend/Scope.cpp"],
+  "file": "src/midend/Scope.cpp"
+},
+{
+  "directory": "/home/pama/code/AHA",
   "arguments": ["/usr/bin/gcc", "-c", "-m64", "-g", "-O0", "-Iinclude", "-Iantlr_frontend", "-Iantlr_runtime/runtime/src", "-Ibuild/.gens/aha/linux/x86_64/debug/platform/windows/idl", "-o", "build/.objs/aha/linux/x86_64/debug/src/midend/User.cpp.o", "src/midend/User.cpp"],
   "file": "src/midend/User.cpp"
 },

@@ -108,5 +108,11 @@ public:
     using InstrListIter = ::std::list<Instruction *>::iterator ;
     InstrListIter eraseInstr(InstrListIter instr_iter);
     InstrListIter InsertInstr(InstrListIter instr_iter, Instruction *instr);
+
+    Instruction const *getTerminator() const;
+    Instruction *getTerminator() {
+        return const_cast<Instruction *>(
+            static_cast<BasicBlock const *>(this)->getTerminator());
+    }
 };
 #endif

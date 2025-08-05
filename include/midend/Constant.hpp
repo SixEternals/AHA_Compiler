@@ -33,7 +33,6 @@ public:
 
 class Constant : public User {
 public:
-    static ConstManager *manager_;
     static ConstManager *getManager();
     // [`static`]
     // 根据两个 Constant 对象（lhs 和 rhs）以及一个操作符（bin_op），生成一个新的 Constant 对象。
@@ -79,6 +78,7 @@ private:
     int val_;
 };
 
+// Constant Float Zero
 class ConstantFP : public Constant {
 public:
     static ConstantFP *get(float val);
